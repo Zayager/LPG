@@ -1,5 +1,5 @@
 Реализация интерфейса управления мощностью двигателя ~220v, используемого в качестве косметологического аппарата.
-![U][1.jpg](https://github.com/Zayager/LPG/blob/screenshots/1.jpg)
+![1.jpg](https://github.com/Zayager/LPG/blob/screenshots/1.jpg)
 Код адаптирован под следующее железо: 
   1. RBDDimmer(BTA16-800)
   2. ESP32_Crowpanel_7.0
