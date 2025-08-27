@@ -34,4 +34,4 @@ jobs:
           cp ${{ github.workspace }}/lib/lv_conf.h ${{ github.workspace }}/libraries/lv_conf.h
       - name: Compile Sketch
         run: | 
-          arduino-cli compile --fqbn esp32:esp32:ESP32_DEV --libraries ${{ github.workspace }}/lib --libraries ${{ github.workspace }}/libraries LPG.ino
+          arduino-cli compile --fqbn esp32:esp32:esp32dev --libraries ${{ github.workspace }}/lib --libraries ${{ github.workspace }}/libraries LPG.ino
