@@ -20,6 +20,12 @@ jobs:
       - name: Clone PCA9557 library
         run: |
          git clone https://github.com/wgrs33/PCA9557.git ${{ github.workspace }}/libraries/PCA9557
+      - name: Clone DimmableLight library
+        run: |
+         git clone https://github.com/fabianoriccardi/dimmable-light.git ${{ github.workspace }}/libraries/DimmableLight
+      - name: Clone lvgl library
+        run: |
+         git clone https://github.com/lvgl/lvgl.git ${{ github.workspace }}/libraries/lvgl
       - name: Compile Sketch
         run: | 
           arduino-cli compile --fqbn esp32:esp32:esp32 --libraries ${{ github.workspace }}/libraries LPG.ino
