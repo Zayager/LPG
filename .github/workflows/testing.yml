@@ -26,9 +26,9 @@ jobs:
       - name: Clone lvgl library
         run: |
          git clone https://github.com/lvgl/lvgl.git ${{ github.workspace }}/libraries/lvgl
-- name: Copy lv_conf.h to /libraries
-  run: |
-    cp lib/lv_conf.h libraries/lv_conf.h
+      - name: Copy lv_conf.h to /libraries
+        run: |
+          cp ${{ github.workspace }}/lib/lv_conf.h ${{ github.workspace }}/libraries/lv_conf.h
       - name: Compile Sketch
         run: | 
           arduino-cli compile --fqbn esp32:esp32:esp32 --libraries ${{ github.workspace }}/lib --libraries ${{ github.workspace }}/libraries LPG.ino
