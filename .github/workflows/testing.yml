@@ -28,7 +28,7 @@ jobs:
          git clone --branch v8.3.3 --depth 1 https://github.com/lvgl/lvgl.git ${{ github.workspace }}/libraries/lvgl
       - name: Clone LovyanGFX library
         run: |
-         git clone https://github.com/lovyan03/LovyanGFX.git ${{ github.workspace }}/libraries/LovyanGFX
+         git clone --branch v1.2.0 --depth 1 https://github.com/lovyan03/LovyanGFX.git ${{ github.workspace }}/libraries/LovyanGFX
       - name: Copy lv_conf.h to /libraries
         run: |
           cp ${{ github.workspace }}/lib/lv_conf.h ${{ github.workspace }}/libraries/lv_conf.h
