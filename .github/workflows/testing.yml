@@ -18,4 +18,4 @@ jobs:
       - name: Install ESP32 core
         run: arduino-cli core install esp32:esp32@2.0.16
       - name: Compile Sketch
-        run: arduino-cli compile --fqbn esp32:esp32:esp32dev LPG.ino
+        run: arduino-cli compile --fqbn esp32:esp32:esp32 LPG.ino
