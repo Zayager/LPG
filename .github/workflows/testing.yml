@@ -21,7 +21,5 @@ jobs:
         run: |
          git clone https://github.com/wgrs33/PCA9557.git ${{ github.workspace }}/libraries/PCA9557
       - name: Compile Sketch
-        run: arduino-cli compile --fqbn esp32:esp32:esp32 LPG.ino
-- name: Compile Sketch
-  run: |
-    arduino-cli compile --fqbn esp32:esp32:esp32 --libraries ${{ github.workspace }}/libraries LPG.ino
+        run: | 
+          arduino-cli compile --fqbn esp32:esp32:esp32 --libraries ${{ github.workspace }}/libraries LPG.ino
