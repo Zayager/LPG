@@ -17,8 +17,8 @@ jobs:
         run: arduino-cli core update-index
       - name: Install ESP32 core
         run: arduino-cli core install esp32:esp32@2.0.16
-- name: Clone PCA9557 library
-  run: |
-    git clone https://github.com/<USER>/<REPO>.git ${{ github.workspace }}/libraries/PCA9557
+      - name: Clone PCA9557 library
+        run: |
+         git clone https://github.com/wgrs33/PCA9557.git ${{ github.workspace }}/libraries/PCA9557
       - name: Compile Sketch
         run: arduino-cli compile --fqbn esp32:esp32:esp32 LPG.ino
