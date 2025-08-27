@@ -13,8 +13,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Set up Arduino CLI
         uses: arduino/setup-arduino-cli@v1
-        with:
-          version: 0.35.3
       - name: Update core index
         run: arduino-cli core update-index
       - name: Install ESP32 core
