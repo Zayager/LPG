@@ -9,19 +9,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: Set up Arduino CLI
         uses: arduino/setup-arduino-cli@v1
         with:
           version: 0.35.3
-
-      - name: Install ESP32 board platform
-        run: |
-          arduino-cli core update-index
-          arduino-cli core install esp32:esp32
-
+      - name: Update core index
+        run: arduino-cli core update-index
+      - name: Install ESP32 core
+        run: arduino-cli core install esp32:esp32@2.0.16
       - name: Compile Sketch
-        run: |
-          arduino-cli compile --fqbn esp32:esp32:esp32 LPG.ino
+        run: arduino-cli compile --fqbn esp32:esp32:esp32dev LPG.ino
