@@ -17,9 +17,6 @@ jobs:
         run: arduino-cli core update-index
       - name: Install ESP32 core
         run: arduino-cli core install esp32:esp32@2.0.16
-      - name: Clone PCA9557 library
-        run: |
-         git clone https://github.com/wgrs33/PCA9557.git ${{ github.workspace }}/libraries/PCA9557
       - name: Clone DimmableLight library
         run: |
          git clone https://github.com/fabianoriccardi/dimmable-light.git ${{ github.workspace }}/libraries/DimmableLight
